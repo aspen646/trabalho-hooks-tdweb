@@ -1,14 +1,11 @@
-import './App.css';
+import Page from './Components/page';
+import ThemeProvider from './context/theme';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-         Hello <b>World</b>.
-        </p>
-      </header>
-    </div>
+    <ThemeProvider>
+    <Page/>
+    </ThemeProvider>
   );
 }
 
