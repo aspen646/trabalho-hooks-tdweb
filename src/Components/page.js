@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react';
-import { ThemeContext } from '../context/theme';
+import React, { useContext } from 'react';
+import { ThemeContext, themes } from '../context/theme';
 
 import Switch from "react-switch";
 
@@ -13,22 +13,21 @@ import linkedinIcon from '../assets/linkedin.svg';
 
 
 function Page() {
-  const { theme } = useContext(ThemeContext);
-  const [localTheme, setLocalTheme] = useState(theme.dark);
+  const { theme, setTheme } = useContext(ThemeContext);
 
   function toggleTheme(){
-    setLocalTheme(localTheme == theme.dark ? theme.light : theme.dark);
+    setTheme(theme === themes.dark ? themes.light : themes.dark);
   }
 
   return (
-    <div className="container" style={localTheme}>
+    <div className="container" style={theme}>
       <header>
         <p style={{margin: 0}}>
          CONTEXT API
         </p>
         <Switch
         onChange={toggleTheme}
-        checked={localTheme == theme.dark }
+        checked={theme === themes.dark }
         uncheckedIcon={false}
         checkedIcon={false}
         />
@@ -55,49 +54,49 @@ function Page() {
             </h3>
             <div className="grupo-integrantes-container">
               <div className="integrante">
-                <img src={arthur} className="foto-integrante"/>
+                <img src={arthur} className="foto-integrante" alt="Imagem do Arthur"/>
                 <div className="nome-integrante">Arthur Henrique</div>
                 <div className="redes-sociais">
                   <a href="https://github.com/aspen646">
-                    <img className="icon" src={githubIcon}/>
+                    <img className="icon" src={githubIcon} alt="Imagem do github"/>
                   </a>
                   <a href="https://www.instagram.com/arthurhenrique200/">
-                    <img className="icon" src={instagramIcon}/>
+                    <img className="icon" src={instagramIcon} alt="Imagem do insta"/>
                   </a>
                   <a href="https://www.linkedin.com/in/henrique-arthur/">
-                    <img className="icon" src={linkedinIcon}/>
+                    <img className="icon" src={linkedinIcon} alt="Imagem do linkedin"/>
                   </a>
                 </div>
               </div>
               <div className="integrante">
-              <img src={saulo} className="foto-integrante"/>
+              <img src={saulo} className="foto-integrante" alt="Imagem do Saulo"/>
                 <div className="foto-integrante"></div>
                 <div className="nome-integrante">Saulo José</div>
                 <div className="redes-sociais">
                   <a href="https://github.com/saulojcf">
-                    <img className="icon" src={githubIcon}/>
+                    <img className="icon" src={githubIcon} alt="Imagem do github"/>
                   </a>
                   <a href="https://www.instagram.com/saulo.jcf/">
-                    <img className="icon" src={instagramIcon}/>
+                    <img className="icon" src={instagramIcon} alt="Imagem do insta"/>
                   </a>
                   <a href="https://www.linkedin.com/in/saulofigueiredo/">
-                    <img className="icon" src={linkedinIcon}/>
+                    <img className="icon" src={linkedinIcon} alt="Imagem do linkedin"/>
                   </a>
                 </div>
               </div>
               <div className="integrante">
-              <img src={wesley} className="foto-integrante"/>
+              <img src={wesley} className="foto-integrante" alt="Imagem do Saulo"/>
                 <div className="foto-integrante"></div>
                 <div className="nome-integrante">Wesley Gomes</div>
                 <div className="redes-sociais">
                 <a href="https://github.com/wesley-gomes-sje">
-                    <img className="icon" src={githubIcon}/>
+                    <img className="icon" src={githubIcon} alt="Imagem do github"/>
                   </a>
                   <a href="https://www.instagram.com/wesley.gomes.l/">
-                    <img className="icon" src={instagramIcon}/>
+                    <img className="icon" src={instagramIcon} alt="Imagem do insta"/>
                   </a>
                   <a href="https://www.linkedin.com/in/wesley-gomes-b2bb79205/">
-                    <img className="icon" src={linkedinIcon}/>
+                    <img className="icon" src={linkedinIcon} alt="Imagem do linkedin"/>
                   </a>
                 </div>
               </div>
