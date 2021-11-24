@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { ThemeContext, themes } from '../context/theme';
+import { Link } from 'react-router-dom';
 
 import Switch from "react-switch";
 
@@ -47,6 +48,7 @@ function Page() {
               <b>Matéria:</b> Tópicos em Desenvolvimento Web
             </div>
             <div className="docente"><b>Docente:</b> Eduardo Augusto Costa Trindade</div>
+            <Link to="/counterContext">Ir para tela secundária</Link>
           </div>
           <div className="grupo-container">
             <h3>

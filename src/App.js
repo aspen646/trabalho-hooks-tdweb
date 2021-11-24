@@ -1,23 +1,19 @@
-import Page from './Components/page';
-import ThemeProvider from './context/theme';
+import Page from "./Pages/page";
+import CounterPage from "./Pages/counterPage";
+import ThemeProvider from "./context/theme";
 
-import CountProvider from "./context/count.js";
-
-import Counter from "./Components/counter.js";
-import Mirror from "./Components/mirror.js";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    // <ThemeProvider>
-    // <Page/>
-    // </ThemeProvider>
-  <CountProvider>
-    <div>
-      <Counter />
-      <hr />
-      <Mirror />
-    </div>
-  </CountProvider>
+      <ThemeProvider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Page />} />
+            <Route path="/counterContext" element={<CounterPage />} />
+          </Routes>
+        </Router>
+      </ThemeProvider>
   );
 }
 
