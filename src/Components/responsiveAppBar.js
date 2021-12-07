@@ -93,11 +93,11 @@ const ResponsiveAppBar = () => {
                 <Button
                   onClick={() => {
                     handleCloseNavMenu();
-                    navigate("/counterContext");
+                    navigate("/natal");
                   }}
                   sx={{ my: 2, color: "text.primary", display: "block" }}
                 >
-                  Contador
+                  Natal
                 </Button>
               </MenuItem>
               <MenuItem>
@@ -134,11 +134,11 @@ const ResponsiveAppBar = () => {
             <Button
               onClick={() => {
                 handleCloseNavMenu();
-                navigate("/counterContext");
+                navigate("/natal");
               }}
               sx={{ my: 2, color: "text.primary", display: "block" }}
             >
-              Contador
+              Natal
             </Button>
             <Button
               onClick={() => {

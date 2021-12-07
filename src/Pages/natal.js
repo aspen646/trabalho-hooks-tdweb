@@ -4,13 +4,13 @@ import CountProvider from "../context/count.js";
 import { ThemeContext, themes } from '../context/theme';
 import { MuiThemeContext, muiThemes } from "../context/muiTheme";
 
-import Counter from "../Components/counter.js";
+import Counter from "../Components/counter";
 import Mirror from "../Components/mirror.js";
 import ResponsiveAppBar from '../Components/responsiveAppBar'
 
-import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
 
-function CounterPage() {
+function Natal() {
     const { theme, setTheme } = useContext(ThemeContext);
     const { muiTheme, setMuiTheme } = useContext(MuiThemeContext);
     function toggleTheme(){
@@ -21,19 +21,17 @@ function CounterPage() {
     return (
         <>
             <ResponsiveAppBar />
+            
+            
             <CountProvider>
-                <div style={theme}>
-                    <Button>Well</Button>
-                    <Counter />
-                    <hr />
-                    <Mirror />
-                    <hr />
-                    <button onClick={toggleTheme}>Trocar Tema</button>
-                    <hr />
-                </div>
+            <Box className="container" 
+            sx={{
+                bgcolor: 'background.default',
+                color: 'text.primary'
+            }}></Box>
             </CountProvider>
         </>
     );
 }
 
-export default CounterPage;
+export default Natal;

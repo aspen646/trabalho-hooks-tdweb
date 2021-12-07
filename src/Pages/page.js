@@ -42,14 +42,6 @@ function Page() {
             checked={muiTheme === muiThemes.dark}
             uncheckedIcon={false}
             checkedIcon={false}
-            icons={{
-              checked: (
-                <img className="icon" src={Lua} alt="Imagem do github" />
-              ),
-              unchecked: (
-                <img className="icon" src={Sol} alt="Imagem do github" />
-              ),
-            }}
           />
         </div>
       </header>

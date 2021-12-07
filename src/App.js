@@ -1,5 +1,5 @@
 import Page from "./Pages/page";
-import CounterPage from "./Pages/counterPage";
+import Natal from "./Pages/natal";
 import TestPage from "./Pages/testPage";
 import MyThemeProvider from "./context/theme";
 import MuiThemeProvider from "./context/muiTheme";
@@ -13,7 +13,7 @@ function App() {
           <Router>
             <Routes>
               <Route path="/" element={<Page />} />
-              <Route path="/counterContext" element={<CounterPage />} />
+              <Route path="/natal" element={<Natal />} />
               <Route path="/testPage" element={<TestPage />} />
             </Routes>
           </Router>
