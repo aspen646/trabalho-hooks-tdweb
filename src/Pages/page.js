@@ -1,29 +1,19 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Box } from '@mui/material';
 
-import Switch from "react-switch";
 
 import arthur from "../assets/arthur.jpeg";
 import wesley from "../assets/wesley.png";
 import saulo from "../assets/saulo.jpg";
-import Sol from "../assets/sol.png";
-import Lua from "../assets/lua.png";
 import "./style.css";
 import githubIcon from "../assets/github.svg";
 import instagramIcon from "../assets/instagram.svg";
 import linkedinIcon from "../assets/linkedin.svg";
 
-import ResponsiveAppBar from '../Components/responsiveAppBar'
-
-import { MuiThemeContext, muiThemes } from "../context/muiTheme";
+import ResponsiveAppBar from '../Components/responsiveAppBar';
 
 function Page() {
-  const { muiTheme, setMuiTheme } = useContext(MuiThemeContext);
-
-  function toggleTheme() {
-    setMuiTheme(muiTheme === muiThemes.dark ? muiThemes.light : muiThemes.dark);
-  }
 
   return (
     <>
@@ -37,20 +27,6 @@ function Page() {
       <header>
         <p style={{ margin: 0 }}>CONTEXT API</p>
         <div>
-          <Switch
-            onChange={toggleTheme}
-            checked={muiTheme === muiThemes.dark}
-            uncheckedIcon={false}
-            checkedIcon={false}
-            icons={{
-              checked: (
-                <img className="icon" src={Lua} alt="Imagem do github" />
-              ),
-              unchecked: (
-                <img className="icon" src={Sol} alt="Imagem do github" />
-              ),
-            }}
-          />
         </div>
       </header>
       <div>
