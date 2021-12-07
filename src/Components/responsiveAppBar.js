@@ -12,14 +12,23 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 
+import { MuiThemeContext, muiThemes } from "../context/muiTheme";
+import Switch from "react-switch";
+
 import { useNavigate } from "react-router-dom";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
+
 const ResponsiveAppBar = () => {
+  const { muiTheme, setMuiTheme } = React.useContext(MuiThemeContext);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   let navigate = useNavigate();
+
+  function toggleTheme() {
+    setMuiTheme(muiTheme === muiThemes.dark ? muiThemes.light : muiThemes.dark);
+  }
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -152,33 +161,12 @@ const ResponsiveAppBar = () => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+            <Switch
+              onChange={toggleTheme}
+              checked={muiTheme === muiThemes.dark}
+              uncheckedIcon={false}
+              checkedIcon={false}
+            />
           </Box>
         </Toolbar>
       </Container>
