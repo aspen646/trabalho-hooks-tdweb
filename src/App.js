@@ -1,6 +1,6 @@
 import Page from "./Pages/page";
 import Natal from "./Pages/natal";
-import TestPage from "./Pages/testPage";
+import Examples from "./Pages/examples";
 import MyThemeProvider from "./context/theme";
 import MuiThemeProvider from "./context/muiTheme";
 
@@ -14,7 +14,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Page />} />
               <Route path="/natal" element={<Natal />} />
-              <Route path="/testPage" element={<TestPage />} />
+              <Route path="/exemplos" element={<Examples />} />
             </Routes>
           </Router>
         </MyThemeProvider>

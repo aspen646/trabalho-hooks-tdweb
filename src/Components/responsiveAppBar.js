@@ -113,7 +113,7 @@ const ResponsiveAppBar = () => {
                 <Button
                   onClick={() => {
                     handleCloseNavMenu();
-                    navigate("/testPage");
+                    navigate("/exemplos");
                   }}
                   sx={{ my: 2, color: "text.primary", display: "block" }}
                 >
@@ -152,7 +152,7 @@ const ResponsiveAppBar = () => {
             <Button
               onClick={() => {
                 handleCloseNavMenu();
-                navigate("/testPage");
+                navigate("/exemplos");
               }}
               sx={{ my: 2, color: "text.primary", display: "block" }}
             >
