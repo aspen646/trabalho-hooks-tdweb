@@ -75,13 +75,13 @@ export default function MusicPlayerSlider() {
               color="text.secondary"
               fontWeight={500}
             >
-              Jun Pulse
+              Dois corações e uma história
             </Typography>
             <Typography noWrap>
-              <b>คนเก่าเขาทำไว้ดี (Can&apos;t win)</b>
+              <b>Dois corações e uma história</b>
             </Typography>
             <Typography noWrap letterSpacing={-0.25}>
-              Chilling Sunday &mdash; คนเก่าเขาทำไว้ดี
+               Zezé de Camargo e Luciano
             </Typography>
           </Box>
         </Box>

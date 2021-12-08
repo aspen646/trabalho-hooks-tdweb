@@ -34,7 +34,7 @@ function Natal() {
                 color: 'text.primary'
             }}>
             <Container maxWidth="sm">
-                <Button variant="contained" className="botao" onClick={verData}>Ver a data do natal</Button>
+                <Button variant="contained" className="botao" onClick={verData}>Quanto tempo falta para o natal</Button>
             </Container>
             <div className="container-dataNatal">
                 <Stack spacing={2} direction="row" className="tags">

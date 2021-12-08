@@ -53,17 +53,17 @@ function Examples() {
               }}
               variant="contained"
             >
-              Primary
+              Primário
             </Button>
             <Button color="secondary">Secondary</Button>
             <Button variant="contained" color="success">
-              Success
+              Sucesso
             </Button>
             <Button variant="outlined" color="error">
-              Error
+              Erro
             </Button>
             <Button variant="outlined" startIcon={<DeleteIcon />}>
-              Delete
+              Excluir
             </Button>
             <IconButton color="secondary" aria-label="add an alarm">
               <AlarmIcon />
@@ -76,7 +76,7 @@ function Examples() {
             </Typography>
             <hr />
             <Button variant="outlined" onClick={handleClick}>
-              Open success snackbar
+              Abrir snackbar
             </Button>
             <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
               <Alert
@@ -84,18 +84,18 @@ function Examples() {
                 severity="success"
                 sx={{ width: "100%" }}
               >
-                This is a success message!
+                Esta é uma mensagem de sucesso \0/
               </Alert>
             </Snackbar>
-            <Alert severity="error">This is an error message!</Alert>
-            <Alert severity="warning">This is a warning message!</Alert>
-            <Alert severity="info">This is an information message!</Alert>
-            <Alert severity="success">This is a success message!</Alert>
+            <Alert severity="error">Esta é uma mensagem de erro!</Alert>
+            <Alert severity="warning">Esta é uma mensagem de aviso!</Alert>
+            <Alert severity="info">Esta é uma mensagem informativa!</Alert>
+            <Alert severity="success">Esta é uma mensagem de sucesso!</Alert>
           </Stack>
         </Container>
         <br />
         <Typography variant="h4" component="h1" color="textSecondary">
-          Music Player
+          Player de Música
         </Typography>
         <hr />
         <Container>

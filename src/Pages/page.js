@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Box } from '@mui/material';
 
 
@@ -44,7 +43,6 @@ function Page() {
             <div className="docente">
               <b>Docente:</b> Eduardo Augusto Costa Trindade
             </div>
-            <Link to="/counterContext">Ir para tela secundária</Link>
           </div>
           <div className="grupo-container">
             <h3>Grupo:</h3>
