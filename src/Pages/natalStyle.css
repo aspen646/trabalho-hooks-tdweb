@@ -1,0 +1,18 @@
+.container {
+  text-align: center;
+}
+
+.container-dataNatal {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.tags {
+  padding-bottom: 50px;
+}
+
